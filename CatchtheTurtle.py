@@ -73,6 +73,7 @@ def timer(time):
         timer_turtle.write(f"Game Time: {time}", align="center", font=FONT)
         game_screen.ontimer(lambda: timer(time-1), 1000)
     else:
+        hide_turtles()
         still_running = False
         timer_turtle.clear()
         timer_turtle.goto(0,25)
@@ -80,7 +81,7 @@ def timer(time):
         score_turtle.clear()
         score_turtle.goto(0,-25)
         score_turtle.write(f"Result Score: {score}", align="center",font= FONT)
-        hide_turtles()
+
 
 game_screen.tracer(0)
 
