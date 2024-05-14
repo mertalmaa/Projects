@@ -68,7 +68,7 @@ def timer(time):
     timer_turtle.penup()
     timer_turtle.pencolor("white")
     timer_turtle.goto(0,top_height-30)
-    if time >= 0:
+    if time > 0:
         timer_turtle.clear()
         timer_turtle.write(f"Game Time: {time}", align="center", font=FONT)
         game_screen.ontimer(lambda: timer(time-1), 1000)
